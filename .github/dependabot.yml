@@ -12,4 +12,4 @@ updates:
   - package-ecosystem: "cargo"
     directory: "/src-tauri"
     schedule:
-    　  interval: "weekly"
+      interval: "weekly"
