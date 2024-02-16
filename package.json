@@ -16,8 +16,8 @@
     "@stylexjs/stylex": "^0.5.1",
     "@tauri-apps/api": "^1.5.3",
     "http-server": "^14.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "canary",
+    "react-dom": "canary"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.6.0",
@@ -35,6 +35,9 @@
     "vite": "^5.0.0",
     "vite-plugin-stylex": "^0.5.0",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "overrides": {
+    "react": "canary"
   },
   "engines": {
     "node": ">=18.0.0"

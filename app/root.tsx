@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./index.css";
+import * as stylex from '@stylexjs/stylex';
 
 export default function App() {
   return (
@@ -17,7 +18,22 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <div {...stylex.props(styles.container)}>
+          <div {...stylex.props(styles.leftContainer)}>
+            <div>
+              <p>File</p>
+            </div>
+            <div>
+              <p>File</p>
+            </div>
+            <div>
+              <p>File</p>
+            </div>
+          </div>
+          <div {...stylex.props(styles.mainContainer)}>
+            <Outlet />
+          </div>
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -41,3 +57,20 @@ export function HydrateFallback() {
     </html>
   );
 }
+
+const styles = stylex.create({
+  container: {
+    display: 'grid',
+    gridTemplateColumns: '200px 1fr',
+  },
+  leftContainer: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+  mainContainer: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+  }
+});

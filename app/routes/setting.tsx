@@ -9,17 +9,15 @@ export const meta: MetaFunction = () => {
 };
 export default function Setting() {
   return (
-    <div {...stylex.props(styles.container)}>
-      <h1>Welcome to Setting</h1>
+    <div>
+      <h1 {...stylex.props(styles.title)}>Welcome to Setting</h1>
       <Link to="/">index</Link>
     </div>
   );
 }
 
 const styles = stylex.create({
-  container: {
-    fontFamily: "system-ui, sans-serif",
-    lineHeight: 1.8,
-    color:'red'
+  title: {
+    color: "red",
   }
 });
